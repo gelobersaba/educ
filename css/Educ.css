@@ -1,0 +1,187 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+.body {
+  zoom: 80%;
+}
+
+.header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0px auto;
+  align-items: center;
+  color: #fff;
+}
+
+.header .logo {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #fff;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  gap: 8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #fff;
+  margin-top: 30px;
+  
+}
+.header ul li a {
+  color: #fff;
+}
+
+.header ul li a:hover {
+  color: rgb(126, 208, 249);
+}
+
+.header ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  display: flex;
+  margin: auto;
+  transition: .5s;
+}
+.header ul li a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  width: 160px;
+  margin-bottom: 0px;
+  position: fixed;
+  padding-top: 10px;
+}
+
+.logo2 {
+  width: 180px;
+  margin-bottom: 0px;
+  position: fixed;
+  padding-left: 150px;
+  padding-top: 0px;
+}
+
+.banner {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  transition: 2s ease;
+}
+
+.banner .glass-wrapper {
+  width: 30%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.course-title {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-top: 13rem;
+}
+
+.course-title p {
+  font-size: 47px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 60px;
+  color: #fff;
+}
+
+.course-title .course {
+  font-size: 85px;
+  letter-spacing: 3px;
+}
+
+.course-title .details {
+  width: 60%;
+  padding-top: 1.5rem;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  padding-bottom: 2.5rem;
+}
+
+  .course-title .explore button {
+    background: rgba(189, 189, 189, 0.299);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: none;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+  }
+
+.course-list {
+  bottom: 25px;
+  position: absolute;
+  left: 35rem;
+}
+
+.course-list p {
+  color: #fff;
+  padding-left: 20px;
+  margin-bottom: auto;
+  line-height: 24px;
+}
+
+.course-list ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  width: 65vw;
+  height: 15rem;
+  align-items: center;
+}
+
+.course-list .thumbnail {
+  display: flex;
+  height: 10rem;
+  width: 18rem;
+  background-size: cover !important;
+  border-radius: 8px;
+  flex-direction: column;
+}
+
+.course-list .thumbnail .details {
+  margin-top: auto;
+  padding: 10px 0px;
+  background: rgba(38, 38, 38, 0.05);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.details .course-name {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.details .course {
+  font-weight: 300;
+}
+
+.course-list .active {
+  margin-top: -5rem;
+}

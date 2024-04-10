@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission</title>
+    <link rel="stylesheet" href="./css/Admission.css">
+    <link rel="icon" href="img/logo/logo educ.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@100;300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style></style>
+ 
+</head>
+<body>
+
+    <section class="header">
+
+    <div class="container">
+
+        <div class="light-container">
+            <img src="img/icon/dark-mode.png" alt="Img not found" draggable="false" data-value="light">
+        </div>
+
+        <p class="main-title">Admission</p>
+        <p class="title">STUDENT INFORMATION</p>
+
+        <label for="first-name">First Name</label>
+        <input type="text" name="first-name" id="first-name" class="field">
+
+        <label for="middle-name">Middle Name</label>
+        <input type="text" name="middle-name" id="middle-name" class="field">
+
+        <label for="last-name">Last Name</label>
+        <input type="text" name="last-name" id="last-name" class="field">
+
+        <label for="">Birth Day</label>
+        <div class="birth-container">
+            <select name="" id="months" class="choices field">
+                <option value="" hidden>Select Month</option>
+            </select>
+
+            <select name="" id="days" class="choices field">
+                <option value="" hidden>Select Day</option>
+            </select>
+
+            <select name="" id="years" class="choices field">
+                <option value="" hidden>Select Year</option>
+            </select>
+        </div>
+
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" class="field">
+
+        <label for="picture">Upload Picture</label>
+        <input type="file" name="picture" id="picture" class="field">
+
+        <p class="title">Educational background</p>
+
+        <p class="description">Input N/A in text field if you are not yet shs or college</p>
+
+        <label for="elementary">Elementary School Name</label>
+        <input type="text" name="elementary" id="elementary" class="field">
+
+        <label for="high-school">High School Name</label>
+        <input type="text" name="high-school" id="high-school" class="field">
+
+        <label for="senior-high-school">SeniorHigh School Name</label>
+        <input type="text" name="senior-high-school" id="senior-high-school" class="field">
+
+        <label for="college-school">College School Name</label>
+        <input type="text" name="college-school" id="college-school" class="field">
+
+        <p class="title">Strands/Courses</p>
+
+        <label for="grade">Grade/Year</label>
+        <select name="grade" id="grade" class="grade field">
+            <option value="11" id="aw">Grade 11 (SHS)</option>
+            <option value="12">Grade 12 (SHS)</option>
+            <option value="college">College</option>
+        </select>
+
+        <label for="strand" class="strand">Strand</label>
+        <select name="strand" id="strand" class="field strand">
+            <option hidden>Select Strand</option>
+            <option value="">STEM</option>
+            <option value="">TVL</option>
+            <option value="">ICT</option>
+            <option value="">HUMSS</option>
+            <option value="">GAS</option>
+        </select>
+
+        <label for="college" class="college">Course</label>
+        <select name="college" id="college" class="field college">
+            <option hidden>Select Course</option>
+            <option value="bsit">BS Information Technology</option>
+            <option value="bscs">BS Computer Science</option>
+            <option value="crim">BS Criminology</option>
+            <option value="bsa">BS Accountancy</option>
+            <option value="bstm">BS Tourism Management</option>
+            <option value="bsba">BS Business Administration</option>
+            <option value="beed">Bachelor of Elementary Education</option>
+            <option value="bsed">Bachelor of Secondary Education</option>
+        </select>
+
+        <label for="majorin" class="majorin">Major In</label>
+        <select name="majorin" id="majorin" class="field majorin">
+            <option value="english">English</option>
+            <option value="mathematics">Mathematics</option>
+        </select>
+
+        <div class="btn-container">
+            <button id="submit-btn" class="btn">SUBMIT</button>
+            <button id="reset-btn" class="btn">RESET</button>
+        </div>
+
+        <div class="space"></div>
+
+    </div>
+
+    <footer>
+        
+        <div class="con-1 con">
+            
+            <div class="granby-logo-container">
+                <img src="/img/logo/logo granby.png" alt="granby-logo">
+                <div class="footer-description-container">
+                    <p class="f-title">Granby College of Science and Technology</p>
+                    <p class="f-description">Former City College of Naic</p>
+                </div>
+            </div>
+
+            <p class="footer-address">265-A Ibayo Silangan, Naic, 4110 Cavite</p>
+
+            <ul class="footer-links">
+                <li>registraroffice@gcst.edu.ph</li>
+                <li>presidentoffice@gcst.edu.ph</li>
+                <li>granbycollge@gmail.com</li>
+            </ul>
+
+        </div>
+
+        <div class="con-2 con">
+            
+            <p class="services-title">Services</p>
+            <ul class="con-2-links">
+                <li>CRIM Portal</li>
+                <li>EDUC Portal</li>
+                <li>BSIT Portal</li>
+                <li>BSCS Portal</li>
+                <li>CRIM Portal</li>
+                <li>BSA Portal</li>
+                <li>Faculty Portal</li>
+            </ul>
+
+        </div>
+
+    </footer>
+
+    <div class="footer-end">
+        <p>Copyright All Right Reserved 2022</p>
+    </div>
+
+
+    <script>
+
+        if(getCookieValue()==undefined){
+            setCookieValue(false);
+        }
+
+        const monthSelection = document.getElementById("months");
+        const daySelection = document.getElementById("days");
+        const yearSelection = document.getElementById("years");
+
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        for(let month of months){
+            const element = document.createElement("option");
+            element.innerText = month;
+            monthSelection.append(element);
+        }
+
+        for(let i=1;i<=31;i++){
+            const element = document.createElement("option");
+            element.innerText = i;
+            daySelection.append(element);
+        }
+
+        for(let i=2023;i>=1800;i--){
+            const element = document.createElement("option");
+            element.innerText = i;
+            yearSelection.append(element);
+        }
+
+        const darkLogo = document.querySelector(".light-container img");
+        const darkContainer = document.querySelector(".container");
+        let isDark = false;
+
+        if(getCookieValue()=="true"){
+            darkLogo.src = "img/icon/light-mode.png"
+            darkContainer.classList.add("dark");
+            isDark=true;
+        }else{
+            darkLogo.src = "img/icon/dark-mode.png"
+            darkContainer.classList.remove("dark");
+            isDark=false;
+        }
+
+        document.querySelector(".light-container").addEventListener("click",function(){
+            if(!isDark){       
+                darkLogo.src = "img/icon/light-mode.png"
+                darkContainer.classList.add("dark");
+                isDark=true;
+                setCookieValue(true)
+            }else{
+                darkLogo.src = "img/icon/dark-mode.png"
+                darkContainer.classList.remove("dark");
+                isDark=false;
+                setCookieValue(false)
+            }
+        })
+
+        const gradeOptions = document.querySelectorAll("#grade option");
+        const gradeSelector = document.getElementById("grade");
+        const collegeSelector = document.getElementById("college");
+
+        const majorin = document.querySelectorAll(".majorin");
+        const college = document.querySelectorAll(".college");
+        const strand = document.querySelectorAll(".strand");
+
+        gradeSelector.addEventListener("click",function(){
+            const value = gradeSelector.value;
+            if(value=="college"){
+                college.forEach(e=>e.style.display="block");
+                strand.forEach(e=>e.style.display="none");
+                if(collegeSelector.value=="bsba" || collegeSelector.value=="bsed"){
+                    majorin.forEach(e=>e.style.display="block");
+                }else{
+                    majorin.forEach(e=>e.style.display="none");
+                }
+            }else{
+                college.forEach(e=>e.style.display="none");
+                strand.forEach(e=>e.style.display="block");
+                majorin.forEach(e=>e.style.display="none");
+            }
+        })
+
+        collegeSelector.addEventListener("click",function(){
+            const value = collegeSelector.value;
+            if(value=="bsba"){
+                majorin.forEach(e=>e.style.display="block");
+                const bsbaOptions = document.querySelectorAll("#majorin option");
+                bsbaOptions[0].innerText = "Marketing Management";
+                bsbaOptions[1].innerText = "Operations Management";
+            }else if(value=="bsed"){
+                majorin.forEach(e=>e.style.display="block");
+                const bsbaOptions = document.querySelectorAll("#majorin option");
+                bsbaOptions[0].innerText = "English";
+                bsbaOptions[1].innerText = "Mathematics";
+            }else{
+                majorin.forEach(e=>e.style.display="none");
+            }
+        })
+        
+        const btns = document.querySelectorAll(".btn");
+
+        btns.forEach(element=>{
+            element.addEventListener("click",function(e){
+                
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.pageY - e.target.offsetTop;
+
+                const circle = document.createElement("span");
+                circle.style.left=x+"px";
+                circle.style.top=y+"px";
+                element.append(circle)
+
+                setTimeout(function(){
+                    circle.remove()
+                },2000)
+
+            })
+        })
+
+        function setCookieValue(value){
+            document.cookie = "dark="+value+";expires=Thu, 01 Jan 2050 00:00:00 GMT;";
+        }
+
+        function getCookieValue(){
+            return document.cookie.split("=")[1];
+        }
+    </script>
+</body>
+</html>

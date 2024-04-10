@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="gelo">
+    <link rel="icon" href="img/logo/logo educ.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/Educ.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/unpkg.com_aos@2.3.1_dist_aos.css">
+    <title>Barchelor of Secondary Education</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>
+          <a href="http://ron.ezyro.com/"><img class="logo"  src="./img/logo/logo granby.png"></a>
+          
+          <a href="http://ron.ezyro.com/"><img class="logo2" src="./img/logo/logo educ.png"></a>
+        </div>
+        <ul data-aos="fade-down" data-aos-duration="800">
+          <li><a style="text-decoration: none;" href="Educ.html">Home</a></li>
+          <li><a style="text-decoration: none;" href="Admission.html">Admission</a></li>
+          <li><a style="text-decoration: none;" href="#">Students</a></li>
+          <li><a style="text-decoration: none;" href="About.html">About</a></li>
+        </ul>
+      </div>
+      <div
+        class="banner"
+        style="background-image: url('./img/bg/granby1.jpg')" 
+      >
+        <div
+          class="glass-wrapper"
+          data-aos="fade-right"
+          data-aos-delay="300"
+          data-aos-duration="800"
+        ></div>
+      </div>
+      <div class="course-title">
+        <p data-aos="fade-left" data-aos-delay="500" data-aos-duration="700">
+          BARCHELOR OF SECONDARY
+        </p>
+        <p
+          class="course"
+          class="course"
+          data-aos="fade-left"
+          data-aos-delay="600"
+          data-aos-duration="700"
+        >
+        EDUCATION DEPARTMENT
+        </p>
+        <div
+          class="details"
+          class="details"
+          data-aos="fade-left"
+          data-aos-delay="700"
+          data-aos-duration="700"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+          repellendus voluptatum quod veritatis, quaerat expedita dicta nobis.
+          Perspiciatis doloribus voluptatem, magni natus iusto ex, fugiat
+          molestias, laudantium possimus dolores soluta.
+        </div>
+        <div
+              class="explore"
+              class="explore"
+              data-aos="fade-left"
+              data-aos-delay="800"
+              data-aos-duration="700"
+        >
+          <a href="https://www.facebook.com/gcstcoed"><button class="explore-button">Explore</button></a>
+        </div>
+      </div>
+      <div class="course-list">
+        
+        <ul class="courses-list">
+          <li
+            id="bsed events"
+            class="active"
+            data-aos="fade-down"
+            data-aos-delay="750"
+            data-aos-duration="700"
+            data-img="./img/events/bsed\ events1.jpg"
+          
+          >
+            <div
+              class="thumbnail"
+              style="background: url('./img/events/bsed\ events1.jpg')"
+            >
+              <div class="details">
+                <p class="course">BSED</p>
+                <p class="course-name">Events</p>
+              </div>
+            </div>
+          </li>
+          <li
+            id="bsed news"
+            data-img="./img/news/bsed\ news1.jpg"
+            data-aos="fade-down"
+            data-aos-delay="750"
+            data-aos-duration="700"
+          >
+          <div
+              class="thumbnail"
+              style="background: url('./img/news/bsed\ news1.jpg')"
+            >
+            <div class="details">
+                <p  class="course">BSED</p>
+                <p class="course-name">News</p>
+              </div>
+            </div>
+          </li>
+          <li
+            id="bsed schedules"
+            data-img="./img/schedules/bsed\ schedules1.jpg"
+            data-aos="fade-down"
+            data-aos-delay="750"
+            data-aos-duration="700"
+          >
+            <div
+              class="thumbnail"
+              style="background: url('./img/schedules/bsed\ schedules1.jpg')"
+            >
+              <div class="details">
+                <p class="course">BSED</p>
+                <p class="course-name">Schedules</p>
+              </div>
+            </div>
+          </li>
+          <li
+            id="bsed professors"
+            data-img="./img/professors/bsed\ professors.jpg"
+            data-aos="fade-down"
+            data-aos-delay="750"
+            data-aos-duration="700"
+          >
+            <div
+              class="thumbnail"
+              style="background: url('./img/professors/bsed\ professors.jpg')"
+            >
+              <div class="details">
+                <p class="course">BSED</p>
+                <p class="course-name">Professors</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <style></style>
+  <script src="./js/aos.js"></script>
+  <script>
+    AOS.init();
+
+    let places = document.querySelectorAll(".course-list li");
+    let active = "./img/bg/granby1.jpg";
+
+    places.forEach((e) => {
+      e.addEventListener("mouseenter", (event) => {
+        places.forEach((e) => {
+          e.classList.remove("active");
+        });
+
+        event.target.classList.add("active");
+        active = event.target.getAttribute("data-img");
+        let banner = document.querySelector(".banner");
+        banner.style.backgroundImage = `url('${active}')`;
+      });
+    });
+
+    id="bsed news"
+
+    document.getElementById("bsed news").addEventListener("click",function(){
+
+    window.location.href = "#";
+    });
+
+
+    document.getElementById("bsed professors").addEventListener("click",function(){
+
+    window.location.href = "#";
+    });
+
+    document.getElementById("explore-button").addEventListener("click",function(){
+
+    window.location.href = "https://www.facebook.com/gcstcoed";
+    });
+  </script>
+</html>

@@ -1,0 +1,351 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+    font-family: var(--font);
+}
+
+.header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/granby.png);
+    background-position: center;
+    background-size: cover;
+     position: relative;
+}
+:root {
+    --font: 'Poppins', "Trebuchet MS",sans-serif;
+    --label-color: rgb(68, 68, 68);
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: white;
+    padding: 30px 30%;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.light-container {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.light-container img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+.light-container:hover {
+    opacity: .85;
+}
+
+.main-title {
+    font-size: 40px;
+    font-family: var(--font);
+    font-weight: bold;
+    color: blue;
+    text-shadow: 2px 1px 0px black;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 25px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: var(--font);
+    text-transform: uppercase;
+}
+
+.description {
+    font-family: var(--font);
+    font-size: 13px;
+    color: rgb(131, 131, 131);
+}
+
+label {
+    color: var(--label-color);
+    font-family: var(--font);
+    margin-top: 10px;
+}
+
+label::after {
+    content: '*';
+    color: red;
+}
+
+.field {
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid rgb(140, 140, 140);
+}
+
+input[type="file"]{
+    padding: 8px 10px;
+}
+
+.birth-container {
+    display: flex;
+    column-gap: 3px;
+}
+
+.choices {
+    width: 33.3%;
+    color: rgb(71, 71, 71);
+}
+
+.btn-container {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    column-gap: 3px;
+}
+
+.btn {
+    position: relative;
+    width: 50%;
+    height: 40px;
+    border: none;
+    background: linear-gradient(45deg, rgb(7, 134, 151), rgb(7, 134, 151));
+    color: white;
+    border-radius: 6px;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.074);
+    transition: all 1s ease-in-out;
+    pointer-events: none;
+    border-radius: 45%;
+    transform: translate(-50%,-50%);
+    animation: clickAnimation 1s ease-in-out;
+}
+
+.btn:last-child {
+    background: linear-gradient(45deg, rgb(7, 134, 151), rgb(7, 134, 151));
+}
+
+/* COURSE/STRANDS */
+
+.college {
+    display: none;
+}
+
+.majorin {
+    display: none;
+}
+
+/* DARK MODE */
+
+.container.dark {
+    background-color: #222;
+    color: white;
+}
+
+.container.dark label {
+    color: rgb(207, 207, 207);
+}
+
+.container.dark input,.container.dark select {
+    background-color: #111;
+    color: rgb(196, 196, 196);
+}
+
+.container.dark .main-title {
+    color: white;
+}
+
+.space {
+    height: 50px;
+    pointer-events: none;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    min-height: fit-content;
+    background-color: #111;
+    display: flex;
+    padding: 20px 5%;
+    column-gap: 20px;
+}
+
+footer .con {
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid cyan;
+    padding-bottom: 15px;
+}
+
+.granby-logo-container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    
+}
+
+.granby-logo-container img {
+    height: 100%;
+}
+
+.footer-description-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-description-container > .f-title {
+    font-family: var(--font);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer-description-container > .f-description {
+    font-family: var(--font);
+    color: rgb(117, 117, 117);
+    font-size: 15px;
+}
+
+.footer-address {
+    font-family: var(--font);
+    font-size: 20px;
+    margin: 20px 0px;
+    color: rgb(234, 234, 234);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    color: rgb(138, 138, 138);
+    font-family: var(--font);
+    font-size: 18px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.footer-links li:hover {
+    color: white;
+}
+
+.services-title {
+    font-size: 22px;
+    color: white;
+    font-family: var(--font);
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.con-2-links {
+    list-style: none;
+}
+
+.con-2-links li {
+    color: rgb(116, 116, 116);
+    font-family: var(--font);
+    cursor: pointer;
+    margin-top: 2px;
+    width: fit-content;
+}
+
+.con-2-links li:hover {
+    color: white;
+}
+
+.footer-end {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-end p {
+    color: rgb(148, 148, 148);
+    font-family: var(--font);
+}
+
+/* KEY FRAMES */
+@keyframes clickAnimation {
+    0% {
+        width: 0px;
+        height: 0px;
+    }100%{
+        width: 600px;
+        height: 600px;
+    }
+}
+
+/* MEDIA */
+@media (width <= 1000px) {
+    .container {
+        padding: 30px 25%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .con {
+        width: 90%;
+    }
+    .footer-description-container > .f-title {
+        font-size: 18px;
+        line-height: 1.2rem;
+    }
+}
+
+@media (width <= 800px) {
+    .container {
+        padding: 30px 20%;
+    }
+}
+
+@media (width <= 700px) {
+    .container {
+        padding: 30px 10%;
+    }
+    .title {
+        font-size: 21px;
+    }
+    footer .con {
+        width: 95%;
+    }
+}
+
+@media (width <= 600px) {
+    .container {
+        padding: 30px 30px;
+    }
+}
