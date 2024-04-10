@@ -1,1 +1,1 @@
-# educ
+# bsed-sample
